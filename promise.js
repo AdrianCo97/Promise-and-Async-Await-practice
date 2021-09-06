@@ -1,11 +1,15 @@
-const recordVideoOne = new Promise((resolve, reject) => {
-    resolve("Video 1 recorded");
+const video = new Promise((resolve, reject) => {
+    let videoStatus = true;
+
+    if(videoStatus){
+        resolve("Completed")
+    }
+    else{
+        reject("Not completed");
+    }
 })
 
-const recordVideoTwo = new Promise((resolve, reject) => {
-    resolve("Video 2 recorded");
-})
 
-const recordVideoThree = new Promise((resolve, reject) => {
-    resolve("Video 3 recorded");
+video.then((message) => {
+  console.log(message);
 })
